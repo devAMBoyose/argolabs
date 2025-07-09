@@ -1,0 +1,57 @@
+<!-- Purchased Button -->
+<button id="purchaseBtn" type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+  <i class="bi bi-plus-lg text-white"></i>
+  Purchased
+</button>
+
+<!-- Modal -->
+<div id="purchaseModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <span class="close-button" id="closePurchaseModal">&times;</span>
+    <h4>Purchase Entry</h4>
+    <form id="purchaseForm">
+      <!-- Inbound Section -->
+      <h5>Inbound</h5>
+      <div class="form-group">
+        <label>Item Code</label><input type="text" class="form-control" name="itemCode">
+        <label>Item Name</label><input type="text" class="form-control" name="itemName">
+        <label>Supplier</label><input type="text" class="form-control" name="supplier">
+        <label>Category</label><input type="text" class="form-control" name="category">
+        <label>UOM</label><input type="text" class="form-control" name="uom">
+        <label>Batch No.</label><input type="text" class="form-control" name="batchNo">
+        <label>Serial No.</label><input type="text" class="form-control" name="serialNo">
+        <label>Expiry Date</label><input type="date" class="form-control" name="expiryDate">
+        <label>Date Received</label><input type="date" class="form-control" name="dateReceived">
+        <label>Stock In</label><input type="number" class="form-control" name="stockIn">
+        <label>Stock Out</label><input type="number" class="form-control" name="stockOut">
+        <label>Beginning</label><input type="number" class="form-control" name="beginning">
+        <label>Qty</label><input type="number" class="form-control" name="qty">
+        <label>Unit Price</label><input type="number" step="0.01" class="form-control" name="unitPrice">
+        <label>Total Amount</label><input type="number" step="0.01" class="form-control" name="totalAmount">
+        <label>Location</label><input type="text" class="form-control" name="location">
+        <label>Allocation</label><input type="text" class="form-control" name="allocation">
+        <label>Argo PO No.</label><input type="text" class="form-control" name="argoPoNo">
+        <label>Supplier PO No.</label><input type="text" class="form-control" name="supplierPoNo">
+        <label>Supplier's Invoice No.</label><input type="text" class="form-control" name="supplierInvoiceNo">
+        <label>Sales Representative</label><input type="text" class="form-control" name="inboundSalesRep">
+      </div>
+
+      <!-- Outbound Section -->
+      <h5 class="mt-4">Outbound</h5>
+      <div class="form-group">
+        <label>Customer Name</label><input type="text" class="form-control" name="customerName">
+        <label>CSI No.</label><input type="text" class="form-control" name="csiNo">
+        <label>DR No.</label><input type="text" class="form-control" name="drNo">
+        <label>SRF No.</label><input type="text" class="form-control" name="srfNo">
+        <label>Customer PO No.</label><input type="text" class="form-control" name="customerPoNo">
+        <label>Sales Representative</label><input type="text" class="form-control" name="outboundSalesRep">
+        <label>Mode of Delivery</label><input type="text" class="form-control" name="deliveryMode">
+        <label>Dispatch Date</label><input type="date" class="form-control" name="dispatchDate">
+        <label>Delivery Date</label><input type="date" class="form-control" name="deliveryDate">
+        <label>Delivered By</label><input type="text" class="form-control" name="deliveredBy">
+      </div>
+
+      <button type="submit" class="btn btn-success mt-3">Save</button>
+    </form>
+  </div>
+</div>

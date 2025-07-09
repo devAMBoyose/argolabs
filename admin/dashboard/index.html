@@ -39,6 +39,7 @@
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="/admin/assets/css/modal.css">
   </head>
   <body> 
     <!-- loader starts-->
@@ -530,48 +531,118 @@
                 <div class="col-5 d-none d-xl-block"> 
                   <!-- Page Sub Header Start-->
                   <div class="left-header main-sub-header p-0">
-                    <div class="left-menu-header">
-                      <ul class="header-left"> 
-                       <li class="onhover-dropdown">
-                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
-                            <i class="bi bi-plus-lg text-white"></i>
-                            Item
-                          </button>
-                          
-                        </li>
-                       <li class="onhover-dropdown">
-                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
-                          <i class="bi bi-plus-lg text-white"></i>
-                          Purchased
-                          </button>
-                          
-                        </li>
-                        <li class="onhover-dropdown">
-                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
-                          <i class="bi bi-plus-lg text-white"></i>
-                          Sales Order
-                          </button>
-                          
-                        </li>
-                        <li class="onhover-dropdown">
-                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
-                          <i class="bi bi-plus-lg text-white"></i>
-                         Deliver Reciept
-                          </button>
-                          
-                        </li>
-                         </li>
-                        <li class="onhover-dropdown">
-                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
-                          <i class="bi bi-plus-lg text-white"></i>
-                         Back Orders
-                          </button>
-                          
-                        </li>
-                        
-                      </ul>
-                    </div>
-                  </div>
+  <div class="left-menu-header">
+    <ul class="header-left"> 
+      
+      <li class="onhover-dropdown">
+        <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+          <i class="bi bi-plus-lg text-white"></i>
+          Item
+        </button>
+      </li>
+
+
+<!-- Purchased Button -->
+<button id="purchaseBtn" type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+  <i class="bi bi-plus-lg text-white"></i>
+  Purchased
+</button>
+
+<!-- Modal -->
+<!-- Modal -->
+<!-- Modal -->
+<div id="purchaseModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <span class="close-button" id="closePurchaseModal">&times;</span>
+    <h4><strong>Purchase Entry</strong></h4>
+    <form id="purchaseForm">
+      <table style="width: 100%;">
+        <tr>
+          <!-- Inbound Column -->
+          <td style="vertical-align: top; width: 48%;">
+            <h5><strong>Inbound</strong> </h5>
+            <div class="form-group">
+              <label>Item Code</label><input type="text" class="form-control" name="itemCode">
+              <label>Item Name</label><input type="text" class="form-control" name="itemName">
+              <label>Supplier</label><input type="text" class="form-control" name="supplier">
+              <label>Category</label><input type="text" class="form-control" name="category">
+              <label>UOM</label><input type="text" class="form-control" name="uom">
+              <label>Batch No.</label><input type="text" class="form-control" name="batchNo">
+              <label>Serial No.</label><input type="text" class="form-control" name="serialNo">
+              <label>Expiry Date</label><input type="date" class="form-control" name="expiryDate">
+              <label>Date Received</label><input type="date" class="form-control" name="dateReceived">
+              <label>Stock In</label><input type="number" class="form-control" name="stockIn">
+              <label>Stock Out</label><input type="number" class="form-control" name="stockOut">
+              <label>Beginning</label><input type="number" class="form-control" name="beginning">
+              <label>Qty</label><input type="number" class="form-control" name="qty">
+              <label>Unit Price</label><input type="number" step="0.01" class="form-control" name="unitPrice">
+              <label>Total Amount</label><input type="number" step="0.01" class="form-control" name="totalAmount">
+              <label>Location</label><input type="text" class="form-control" name="location">
+              <label>Allocation</label><input type="text" class="form-control" name="allocation">
+              <label>Argo PO No.</label><input type="text" class="form-control" name="argoPoNo">
+              <label>Supplier PO No.</label><input type="text" class="form-control" name="supplierPoNo">
+              <label>Supplier's Invoice No.</label><input type="text" class="form-control" name="supplierInvoiceNo">
+              <label>Sales Representative</label><input type="text" class="form-control" name="inboundSalesRep">
+            </div>
+          </td>
+
+          <!-- Spacer Column -->
+          <td style="width: 4%;"></td>
+
+          <!-- Outbound Column -->
+          <td style="vertical-align: top; width: 48%;">
+            <h5><strong>Outbound</strong></h5>
+            <div class="form-group">
+              <label>Customer Name</label><input type="text" class="form-control" name="customerName">
+              <label>CSI No.</label><input type="text" class="form-control" name="csiNo">
+              <label>DR No.</label><input type="text" class="form-control" name="drNo">
+              <label>SRF No.</label><input type="text" class="form-control" name="srfNo">
+              <label>Customer PO No.</label><input type="text" class="form-control" name="customerPoNo">
+              <label>Sales Representative</label><input type="text" class="form-control" name="outboundSalesRep">
+              <label>Mode of Delivery</label><input type="text" class="form-control" name="deliveryMode">
+              <label>Dispatch Date</label><input type="date" class="form-control" name="dispatchDate">
+              <label>Delivery Date</label><input type="date" class="form-control" name="deliveryDate">
+              <label>Delivered By</label><input type="text" class="form-control" name="deliveredBy">
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <button type="submit" class="btn btn-success mt-3">Save</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+      <li class="onhover-dropdown">
+        <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+          <i class="bi bi-plus-lg text-white"></i>
+          Sales Order
+        </button>
+      </li>
+
+      <li class="onhover-dropdown">
+        <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+          <i class="bi bi-plus-lg text-white"></i>
+          Deliver Receipt
+        </button>
+      </li>
+
+      <li class="onhover-dropdown">
+        <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+          <i class="bi bi-plus-lg text-white"></i>
+          Back Orders
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
                   <!-- Page Sub Header end
                   -->
                 </div>
@@ -1298,7 +1369,20 @@
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
- 
-    <!-- Plugin used-->
+ <!-- 1. Load include.js -->
+<!-- Your global scripts (like layout, Bootstrap, etc.) -->
+<script src="/admin/assets/js/modal/include.js"></script>
+<script>
+  includeHTML().then(() => {
+    const script = document.createElement('script');
+    script.src = '/admin/assets/js/modal/modal.js';
+    document.body.appendChild(script);
+  });
+</script>
+<script src="/admin/assets/js/modal/modal.js"></script>
+
+
+
+
   </body>
 </html>
