@@ -546,10 +546,24 @@
                           
                         </li>
                        <li class="onhover-dropdown">
-                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
-                          <i class="bi bi-plus-lg text-white"></i>
-                          Purchased
-                          </button>
+                        <!-- Purchased Button -->
+<li class="onhover-dropdown">
+  <button type="button" class="btn btn-primary d-flex align-items-center gap-2" onclick="openModal()">
+    <i class="bi bi-plus-lg text-white"></i>
+    Purchased
+  </button>
+</li>
+
+<!-- Modal Structure -->
+<div id="purchaseModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h4>Purchase Entry Details</h4>
+    <p>Enter inbound/outbound info here...</p>
+    <!-- You can replace this with a form or dynamic fields based on your screenshot -->
+  </div>
+</div>
+
                           
                         </li>
                         <li class="onhover-dropdown">
