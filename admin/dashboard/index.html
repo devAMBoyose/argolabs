@@ -343,7 +343,7 @@
                   <!-- Dashboard Link -->
                    <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                    <a class="sidebar-link sidebar-title" href="../dashboard/dashboard-01.html" target="_blank">
+                    <a class="sidebar-link sidebar-title" href="/admin/dashboard/dashboard-01.html" target="_blank">
                       <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path fill="#005da3"
@@ -504,12 +504,6 @@
                     </li>
 
 
-
-
-
-                  
-                  
-                 
              
                   
                   </li> <!-- End Mega Menu -->
@@ -546,24 +540,10 @@
                           
                         </li>
                        <li class="onhover-dropdown">
-                        <!-- Purchased Button -->
-<li class="onhover-dropdown">
-  <button type="button" class="btn btn-primary d-flex align-items-center gap-2" onclick="openModal()">
-    <i class="bi bi-plus-lg text-white"></i>
-    Purchased
-  </button>
-</li>
-
-<!-- Modal Structure -->
-<div id="purchaseModal" class="custom-modal">
-  <div class="custom-modal-content">
-    <span class="close-button" onclick="closeModal()">&times;</span>
-    <h4>Purchase Entry Details</h4>
-    <p>Enter inbound/outbound info here...</p>
-    <!-- You can replace this with a form or dynamic fields based on your screenshot -->
-  </div>
-</div>
-
+                          <button type="button" class="btn btn-primary d-flex align-items-center gap-2" style="white-space: nowrap;">
+                          <i class="bi bi-plus-lg text-white"></i>
+                          Purchased
+                          </button>
                           
                         </li>
                         <li class="onhover-dropdown">
@@ -613,27 +593,662 @@
             
  <!-- Main page starts-->
 
+ <!-- Container-fluid starts-->
+          <div class="container-fluid Inventory-dashboard">
+            <div class="row">
+              <div class="col-xl-6 proorder-xl-1">
+                <div class="card">
+                  <div class="card-body selling-card"> 
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="sale-card"> 
+                          <div class="sale-date">
+                            <h4>Total Paid</h4><a href="order-history.html"><span class="txt-primary f-w-700">(See all sales)</span></a>
+                          </div><span class="f-w-700 f-14 pb-4">Jan 1,2024 - Jun 30,2025</span>
+                          <div class="sale-data">
+                            <ul>
+                              <li>
+                                <h4>₱654.85K</h4>
+                                <div class="sale-value"> 
+                                  <svg>
+                                    <use href="../assets/svg/icon-sprite.svg#drop-menu"> </use>
+                                  </svg>
+                                  <div class="sales-value"><span class="txt-danger">95%</span><span>6 month before </span></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="latest-chart" id="latestSales-chart"> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 proorder-xl-2">
+                <div class="card">
+                  <div class="card-header pb-0">
+                    <div class="header-top">
+                      <h4>Summary</h4>
+                      <div class="dropdown icon-dropdown setting-menu">
+                        <button class="btn dropdown-toggle" id="userdropdown12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <svg>
+                            <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown12"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pt-0 summary-card"><span class="f-w-700 f-14">Jan 1,2024 - Jun 30,2022</span>
+                    <div class="summary-progressbar">
+                      <ul>
+                        <li>
+                          <div>
+                            <h4>₱654.85K</h4><span>Summary</span>
+                          </div>
+                          <div class="progress-showcase">
+                            <div class="progress sm-progress-bar progress-border-primary">
+                              <div class="progress-bar bg-primary" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div> 
+                            <h4>₱34.5K</h4><span>Orders </span>
+                          </div>
+                          <div>
+                            <div class="progress sm-progress-bar progress-border-secondary">
+                              <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h4>₱3.86K</h4><span>Avg. Order Value </span>
+                          </div>
+                          <div>
+                            <div class="progress-showcase"> 
+                              <div class="progress sm-progress-bar progress-border-secondary">
+                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div> 
+                            <h4>₱3.86K</h4><span>Avg. Order Value </span>
+                          </div>
+                          <div>
+                            <div class="progress sm-progress-bar progress-border-secondary">
+                              <div class="progress-bar bg-secondary" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row d-flex align-items-stretch">
+
+                 <!-- <!-- Top Row: Consigned Items + Near Expiry -->
+<div class="row d-flex align-items-stretch mb-4">
+  <!-- Consigned Items -->
+  <div class="col-xl-7 proorder-xl-3 box-col-6">
+    <div class="card h-100">
+      <div class="card-header pb-0">
+        <div class="header-top">
+          <h4>Consigned Items</h4>
+          <div class="dropdown icon-dropdown setting-menu">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <svg><use href="../assets/svg/icon-sprite.svg#setting"></use></svg>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="#">Weekly</a>
+              <a class="dropdown-item" href="#">Monthly</a>
+              <a class="dropdown-item" href="#">Yearly</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive custom-scrollbar">
+          <table class="last-orders-table table">
+            <thead>
+              <tr>
+                <th><input class="form-check-input" type="checkbox"></th>
+                <th>Product Name</th>
+                <th>Date & Time</th>
+                <th>Customer</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Surgical masks</h4></a><span class="f-w-600">Surgrical</span></td>
+                <td><a href="product.html"><h4>14 Mar 2024</h4></a><span class="f-w-600">10:00 AM</span></td>
+                <td>N95 respirators</td>
+                <td>₱ 247.92</td>
+                <td class="txt-success">Completed</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Face shields</h4></a><span class="f-w-600">Face shields</span></td>
+                <td><a href="product.html"><h4>12 Mar 2024</h4></a><span class="f-w-600">05:00 AM</span></td>
+                <td>Face shields</td>
+                <td>₱ 695.20</td>
+                <td class="txt-warning">Waiting</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Gloves</h4></a><span class="f-w-600">Gloves</span></td>
+                <td><a href="product.html"><h4>10 Mar 2024</h4></a><span class="f-w-600">12:30 AM</span></td>
+                <td>Gloves</td>
+                <td>₱ 189.30</td>
+                <td class="txt-success">Completed</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Gowns</h4></a><span class="f-w-600">Gowns</span></td>
+                <td><a href="product.html"><h4>01 Mar 2024</h4></a><span class="f-w-600">09:20 AM</span></td>
+                <td>Gowns</td>
+                <td>₱ 249.21</td>
+                <td class="txt-danger">Pending</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Near Expiry -->
+  <div class="col-xl-5 proorder-xl-4 col-lg-6 box-col-6">
+    <div class="card h-100">
+      <div class="card-header pb-0">
+        <div class="header-top">
+          <h4>Near Expiry</h4>
+          <div class="dropdown icon-dropdown setting-menu">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <svg><use href="../assets/svg/icon-sprite.svg#setting"></use></svg>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="#">Weekly</a>
+              <a class="dropdown-item" href="#">Monthly</a>
+              <a class="dropdown-item" href="#">Yearly</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive custom-scrollbar">
+          <table class="last-orders-table table">
+            <thead>
+              <tr>
+                <th><input class="form-check-input" type="checkbox"></th>
+                <th>Product Name</th>
+                <th>Date & Time</th>
+                <th>Customer</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Gowns</h4></a><span class="f-w-600">Gowns</span></td>
+                <td><a href="product.html"><h4>14 Mar 2024</h4></a><span class="f-w-600">10:00 AM</span></td>
+                <td>Gowns</td>
+                <td>₱ 247.92</td>
+                <td class="txt-success">Completed</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Shoe covers</h4></a><span class="f-w-600">Shoe covers</span></td>
+                <td><a href="product.html"><h4>12 Mar 2024</h4></a><span class="f-w-600">05:00 AM</span></td>
+                <td>Shoe covers</td>
+                <td>₱ 695.20</td>
+                <td class="txt-warning">Waiting</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Shoe covers</h4></a><span class="f-w-600">Shoe covers</span></td>
+                <td><a href="product.html"><h4>10 Mar 2024</h4></a><span class="f-w-600">12:30 AM</span></td>
+                <td>Shoe covers</td>
+                <td>₱ 189.30</td>
+                <td class="txt-success">Completed</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td><a href="product.html"><h4>Shoe covers</h4></a><span class="f-w-600">Shoe covers</span></td>
+                <td><a href="product.html"><h4>01 Mar 2024</h4></a><span class="f-w-600">09:20 AM</span></td>
+                <td>Shoe covers</td>
+                <td>₱ 249.21</td>
+                <td class="txt-danger">Canceled</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Row (example) -->
+<div class="row g-3">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card">
+                  <div class="card-header">
+                    <div class="header-top"> 
+                      <h4>Top Client Transactions</h4>
+                      <div class="dropdown icon-dropdown setting-menu">
+                        <button class="btn dropdown-toggle" id="userdropdown21" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <svg>
+                            <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown21"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive custom-scrollbar">
+                      <table class="last-orders-table table">
+                        <thead>
+                          <tr>
+                            <th>Product Name</th>
+                            <th>Date</th>
+                            <th>Payment</th>
+                            <th>Purchase</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div><img src="../assets/images/product/5.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span> #854692</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>30 Mar 2024</h4></a></div>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>₱3,658</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div><img src="../assets/images/product/9.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#315984</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>25 Mar 2024</h4></a></div>
+                            </td>
+                            <td>Bank Transfer</td>
+                            <td>₱6,954</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div><img src="../assets/images/product/6.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#315984 </span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>20 Mar 2024</h4></a></div>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>₱1,945</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div> <img src="../assets/images/product/7.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>Headphone</h4></a><span>#874596</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>14 Mar 2024 </h4></a></div>
+                            </td>
+                            <td>Bank Transfer</td>
+                            <td>₱3,942 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+    <div class="card">
+      <div class="card-header"><h5>Weekly User Activity</h5></div>
+      <div class="card-body">...</div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header"><h5>Monthly Selling Product</h5></div>
+      <div class="card-body">...</div>
+    </div>
+  </div>
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- Main page starts-->
+              <div class="col-xxl-4 col-lg-6 proorder-xl-5 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="header-top"> 
+                      <h4>Top Client Transactions</h4>
+                      <div class="dropdown icon-dropdown setting-menu">
+                        <button class="btn dropdown-toggle" id="userdropdown21" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <svg>
+                            <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown21"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive custom-scrollbar">
+                      <table class="last-orders-table table">
+                        <thead>
+                          <tr>
+                            <th>Product Name</th>
+                            <th>Date</th>
+                            <th>Payment</th>
+                            <th>Purchase</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div><img src="../assets/images/product/5.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span> #854692</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>30 Mar 2024</h4></a></div>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>₱3,658</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div><img src="../assets/images/product/9.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#315984</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>25 Mar 2024</h4></a></div>
+                            </td>
+                            <td>Bank Transfer</td>
+                            <td>₱6,954</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div><img src="../assets/images/product/6.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#315984 </span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>20 Mar 2024</h4></a></div>
+                            </td>
+                            <td>Credit Card</td>
+                            <td>₱1,945</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div> <img src="../assets/images/product/7.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>Headphone</h4></a><span>#874596</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>14 Mar 2024 </h4></a></div>
+                            </td>
+                            <td>Bank Transfer</td>
+                            <td>₱3,942 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-md-6 proorder-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header pb-0">
+                    <div class="header-top">
+                      <h4>Weekly User Activity</h4>
+                      <div class="dropdown icon-dropdown setting-menu">
+                        <button class="btn dropdown-toggle" id="userdropdown23" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <svg>
+                            <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown23"><a class="dropdown-item" href="#">Weekly </a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pt-0">
+                    <div class="user-activity" id="UserActivity"> </div>
+                    <div class="user-activity">
+                      <ul>
+                        <li>
+                          <div class="applications-menu">
+                            <div class="rounded-btn-primary"></div>
+                            <h3>Online Applications</h3>
+                          </div>
+                          <h4>55%</h4>
+                        </li>
+                        <li>
+                          <div class="applications-menu">
+                            <div class="rounded-btn-secondary"></div>
+                            <h3>Offline Applications</h3>
+                          </div>
+                          <h4>45%</h4>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-md-6 proorder-xl-7 box-col-12">
+                <div class="card">
+                  <div class="card-header"> 
+                    <div class="header-top">
+                      <h4>Monthly Selling Product (Mar 2024) </h4>
+                      <div class="dropdown icon-dropdown setting-menu">
+                        <button class="btn dropdown-toggle" id="userdropdown34" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <svg> 
+                            <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown34"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive custom-scrollbar">
+                      <table class="table monthly-selling">
+                        <thead> 
+                          <tr>
+                            <th>Product Name</th>
+                            <th>Orders </th>
+                            <th>Status </th>
+                            <th class="text-end">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td> 
+                              <div class="user-data">
+                                <div class="product-image"><img src="../assets/images/dashboard-2/product/20.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>Iphone</h4></a><span>#654892</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>652</h4></a></div>
+                            </td>
+                            <td class="txt-primary">In Stock</td>
+                            <td>₱20.00</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div class="product-image"><img src="../assets/images/dashboard-2/product/21.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#324856</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>123</h4></a></div>
+                            </td>
+                            <td class="txt-warning">Low stock</td>
+                            <td>₱12.25</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data">
+                                <div class="product-image"><img src="../assets/images/dashboard-2/product/23.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#954123</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>200</h4></a></div>
+                            </td>
+                            <td class="txt-primary">In Stock</td>
+                            <td>₱30.99</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="user-data"> 
+                                <div class="product-image"> <img src="../assets/images/dashboard-2/product/22.png" alt="product"></div>
+                                <div><a href="product.html">
+                                    <h4>N95 Surgical Mask</h4></a><span>#954026</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="user-time"><a href="product.html">
+                                  <h4>501</h4></a></div>
+                            </td>
+                            <td class="txt-danger">Out of stock</td>
+                            <td>₱34.68 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-6 proorder-xl-9 box-col-12"> 
+                <div class="card">
+                  <div class="card-header">
+                    <div class="header-top"> 
+                      <h4>Sales Details</h4>
+                      <div class="sales-details"> 
+                        <div class="user-activity">
+                          <ul> 
+                            <li>
+                              <div class="applications-menu">
+                                <div class="rounded-btn-primary"></div>
+                                <h3>Running Orders</h3>
+                              </div>
+                            </li>
+                            <li> 
+                              <div class="applications-menu">
+                                <div class="rounded-btn-secondary"> </div>
+                                <h3>Complete Delivery</h3>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="dropdown icon-dropdown setting-menu">
+                          <button class="btn dropdown-toggle" id="userdropdown15" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg>
+                              <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                            </svg>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown15"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body"> 
+                    <div class="overview-wrapper"> 
+                      <div class="overview-dash-line" id="orderoverview"></div>
+                    </div>
+                    <div class="chart-dash-2-line" id="chart-dash-2-line"></div>
+                  </div>
+                </div>
+              </div>
+              
+           <!-- Main page starts-->
       </div>
           <!-- Container-fluid Ends-->
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- footer start-->
         <footer class="footer">
           <div class="container-fluid">
